@@ -1,0 +1,195 @@
+@use '../../styles/variables' as *;
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.svgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgIcon {
+  width: 54.57px;
+  height: 56px;
+  margin-bottom: 21px;
+}
+
+.title {
+  font-weight: 700;
+  @include font(24px, 29px);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.genderTitle,
+.dataTitle {
+  font-weight: 700;
+  @include font(16px, 20px);
+  margin-bottom: 8px;
+}
+
+.genderItemWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.genderItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90px;
+  height: 80px;
+  border: 1px solid $radio-border-color;
+  border-radius: 16px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
+}
+
+.genderIcon {
+  fill: $text-color;
+}
+
+.genderText {
+  @include font(16px, 20px);
+  margin-top: 8px;
+}
+
+.genderItemActive {
+  border: 1px solid $accent-color;
+
+  & .genderText {
+    font-weight: 700;
+    color: $accent-color;
+  }
+
+  & .genderIcon {
+    fill: $accent-color;
+  }
+}
+
+.dataWrapper {
+  margin-bottom: 20px;
+}
+
+.dataInput {
+  width: 308px;
+  height: 50px;
+  @include font(16px, 20px);
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  padding-left: 18px;
+  color: $text-color;
+
+  &::placeholder {
+    color: $border-color;
+  }
+}
+
+.button {
+  width: 308px;
+  height: 50px;
+  font-weight: 700;
+  @include font(16px, 20px);
+  color: $secondary-text-color;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 16px;
+
+  &:hover {
+    background-color: $accent-hover-color;
+  }
+
+  &:active {
+    background-color: $accent-pressed-color;
+  }
+}
+
+.accountText {
+  text-align: center;
+  @include font(14px, 17px);
+  margin: 16px 0;
+}
+
+.privacyText {
+  text-align: center;
+  @include font(14px, 17px);
+}
+
+.accountTextLink,
+.privacyTextLink {
+  font-weight: 700;
+  color: $accent-color;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .svgIcon {
+    width: 79.91px;
+    height: 82px;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    margin-bottom: 35px;
+  }
+
+  .genderTitle,
+  .dataTitle {
+    @include font(18px, 22px);
+    margin-bottom: 12px;
+  }
+
+  .genderItemWrapper {
+    margin-bottom: 30px;
+  }
+
+  .genderItem {
+    width: 156px;
+    height: 100px;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  .genderText {
+    @include font(18px, 22px);
+  }
+
+  .dataWrapper {
+    margin-bottom: 30px;
+  }
+
+  .dataInput {
+    width: 500px;
+    height: 70px;
+    @include font(18px, 22px);
+    padding-left: 25px;
+  }
+
+  .button {
+    width: 500px;
+    height: 70px;
+    @include font(18px, 22px);
+  }
+
+  .accountText {
+    @include font(18px, 22px);
+    margin: 30px 0 20px;
+  }
+
+  .privacyText {
+    @include font(18px, 22px);
+  }
+}
